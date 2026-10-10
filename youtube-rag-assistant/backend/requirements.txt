@@ -1,0 +1,10 @@
+fastapi[standard]
+langchain-core
+langchain-text-splitters
+langchain-groq
+langchain-huggingface
+langchain-chroma
+chromadb
+sentence-transformers>=5.2.0
+youtube-transcript-api
+python-dotenv

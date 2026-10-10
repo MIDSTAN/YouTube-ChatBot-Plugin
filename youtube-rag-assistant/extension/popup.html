@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>YouTube RAG Assistant</title>
+
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <div class="chat-container">
+
+        <!-- Header -->
+        <header class="chat-header">
+
+            <div class="header-info">
+                <div class="bot-icon">AI</div>
+
+                <div>
+                    <h1>YouTube Assistant</h1>
+                    <p id="connection-status">
+                        Checking video...
+                    </p>
+                </div>
+            </div>
+
+            <button
+                id="close-button"
+                class="icon-button"
+                aria-label="Close chatbot"
+                title="Close"
+            >
+                ×
+            </button>
+
+        </header>
+
+
+        <!-- Current video -->
+        <section class="video-section">
+
+            <p class="section-label">CURRENT VIDEO</p>
+
+            <h2 id="video-title">
+                No video detected
+            </h2>
+
+            <p id="video-id"></p>
+
+            <button
+                id="prepare-button"
+                class="primary-button"
+                disabled
+            >
+                Prepare Video
+            </button>
+
+        </section>
+
+
+        <!-- Chat messages -->
+        <main
+            id="chat-messages"
+            class="chat-messages"
+            aria-live="polite"
+        >
+
+            <div class="message assistant-message">
+                <div class="message-avatar">AI</div>
+
+                <div class="message-content">
+                    Hello! Prepare the current video, then ask
+                    me questions about its content.
+                </div>
+            </div>
+
+        </main>
+
+
+        <!-- Input area -->
+        <footer class="chat-footer">
+
+            <form id="chat-form">
+
+                <textarea
+                    id="question-input"
+                    placeholder="Ask about this video..."
+                    rows="2"
+                    maxlength="2000"
+                    disabled
+                    required
+                ></textarea>
+
+                <button
+                    id="send-button"
+                    type="submit"
+                    disabled
+                    aria-label="Send question"
+                >
+                    ➤
+                </button>
+
+            </form>
+
+            <p class="footer-note">
+                Answers are generated using the video's transcript.
+            </p>
+
+        </footer>
+
+    </div>
+
+    <script src="popup.js"></script>
+
+</body>
+</html>
