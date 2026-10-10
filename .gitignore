@@ -1,0 +1,16 @@
+# Environment variables and secrets
+**/.env
+**/.env.*
+!**/.env.example
+
+# Python environments
+myenv/
+.venv/
+__pycache__/
+*.py[cod]
+
+# Vector database
+**/chroma_db/
+
+# Test artifacts
+.pytest_cache/
