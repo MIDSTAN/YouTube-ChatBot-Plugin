@@ -14,3 +14,4 @@ __pycache__/
 
 # Test artifacts
 .pytest_cache/
+youtube-rag-assistant/.env
